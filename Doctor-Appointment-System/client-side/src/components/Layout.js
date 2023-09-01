@@ -62,11 +62,6 @@ function Layout({ children }) {
       path: "/admin/doctorslist",
       icon: "ri-user-star-line",
     },
-    {
-      name: "Profile",
-      path: "/profile",
-      icon: "ri-user-line",
-    },
   ];
 
   const menuToBeRendered = user?.isAdmin
@@ -81,7 +76,7 @@ function Layout({ children }) {
         <div className="sidebar">
           <div className="sidebar-header">
             <h1 className="logo">Doctor portal</h1>
-            <h1 className="role">{role}</h1>
+            <h1 className="role">Role: {role}</h1>
           </div>
 
           <div className="menu">

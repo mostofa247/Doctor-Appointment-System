@@ -11,6 +11,10 @@ import ApplyDoctor from "./pages/ApplyDoctor";
 import Notifications from "./pages/Notifications";
 import Userslist from "./pages/Admin/Userslist";
 import DoctorsList from "./pages/Admin/DoctorsList";
+import Profile from "./pages/Doctor/Profile";
+import BookAppointment from "./pages/BookAppointment";
+import Appointments from "./pages/Appointments";
+import DoctorAppointments from "./pages/Doctor/DoctorAppointments";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -47,7 +51,6 @@ function App() {
             </PublicRoute>
           }
         />
-
         <Route
           path="/apply-doctor"
           element={
@@ -56,7 +59,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/notifications"
           element={
@@ -65,7 +67,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/admin/userslist"
           element={
@@ -74,12 +75,46 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/admin/doctorslist"
           element={
             <ProtectedRoute>
               <DoctorsList />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/doctor/profile/:userId"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/book-appointment/:doctorId"
+          element={
+            <ProtectedRoute>
+              <BookAppointment />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/appointments"
+          element={
+            <ProtectedRoute>
+              <Appointments />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/doctor/appointments"
+          element={
+            <ProtectedRoute>
+              <DoctorAppointments />
             </ProtectedRoute>
           }
         />
