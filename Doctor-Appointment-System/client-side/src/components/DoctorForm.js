@@ -17,7 +17,7 @@ function DoctorForm({ onFinish, initivalValues }) {
         }),
       }}
     >
-      <h1 className="card-title mt-3">Personal Information</h1>
+      <h1 className="card-title mt-3 ">Personal Information</h1>
       <Row gutter={20}>
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item

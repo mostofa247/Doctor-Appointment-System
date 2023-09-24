@@ -69,9 +69,12 @@ function Notifications() {
       <Tabs>
         <Tabs.TabPane tab="Unseen" key={0}>
           <div className="d-flex justify-content-end">
-            <h1 className="anchor" onClick={() => markAllAsSeen()}>
+            <button
+              className="btn btn-outline-success"
+              onClick={() => markAllAsSeen()}
+            >
               Mark all as seen
-            </h1>
+            </button>
           </div>
 
           {user?.unseenNotifications.map((notification) => (
@@ -85,9 +88,12 @@ function Notifications() {
         </Tabs.TabPane>
         <Tabs.TabPane tab="seen" key={1}>
           <div className="d-flex justify-content-end">
-            <h1 className="anchor" onClick={() => deleteAll()}>
+            <button
+              className="btn btn-outline-danger"
+              onClick={() => deleteAll()}
+            >
               Delete all
-            </h1>
+            </button>
           </div>
           {user?.seenNotifications.map((notification) => (
             <div

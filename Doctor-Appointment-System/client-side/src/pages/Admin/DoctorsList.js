@@ -81,20 +81,20 @@ function DoctorsList() {
       render: (text, record) => (
         <div className="d-flex">
           {record.status === "pending" && (
-            <h1
-              className="anchor"
+            <button
+              className="btn btn-outline-success"
               onClick={() => changeDoctorStatus(record, "approved")}
             >
               Approve
-            </h1>
+            </button>
           )}
           {record.status === "approved" && (
-            <h1
-              className="anchor"
+            <button
+              className="btn btn-outline-danger ms-2"
               onClick={() => changeDoctorStatus(record, "blocked")}
             >
               Block
-            </h1>
+            </button>
           )}
         </div>
       ),

@@ -88,18 +88,18 @@ function DoctorAppointments() {
         <div className="d-flex">
           {record.status === "pending" && (
             <div className="d-flex">
-              <h1
-                className="anchor px-2"
+              <button
+                className="btn btn-outline-success px-2"
                 onClick={() => changeAppointmentStatus(record, "approved")}
               >
                 Approve
-              </h1>
-              <h1
-                className="anchor"
+              </button>
+              <button
+                className="btn btn-outline-danger ms-2"
                 onClick={() => changeAppointmentStatus(record, "rejected")}
               >
                 Reject
-              </h1>
+              </button>
             </div>
           )}
         </div>
